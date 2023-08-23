@@ -1,0 +1,157 @@
+/* ------------- 移除bootstrap預設樣式 ------------- */
+.card{
+    border-radius: 0;
+    border: 0;
+}
+
+/* ------------- 大標 ------------- */
+.title{
+    color: gray;
+    font-weight: 600;
+}
+
+/* ------------- li去除預設點點 ------------- */
+li{
+    list-style: none;
+    position: relative;
+}
+
+/* ------------- 待辦事項 ------------- */
+.todo-title{
+    color: #fff;
+    background: #975aad;
+}
+.purple{
+    color: #975aad;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid;
+}
+
+/* ------------- 完成事項 ------------- */
+.done-title{
+    color: #fff;
+    background: #eab32a;
+}
+.yellow{
+    color: #eab32a;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid;
+}
+
+/* ------------- 桌機區塊靠上對齊 ------------- */
+.box{
+    position: relative;
+}
+@media screen and (min-width:768px){
+    .todo{
+        position: relative;
+    }
+    .done{
+        position: relative;
+    }
+}
+@media screen and (min-width:992px){
+    .todo{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .done{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/* ------------- checkbox ------------- */
+.checkbox-css {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid gray;
+    color: gray;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+    border-radius: 3px;
+}
+.checkbox-css:checked::before {
+    width: 20px;
+    height: 20px;
+    content: '\f00c';
+    font-size: 13px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Font Awesome 5 Free';
+}
+
+/* ------------- 完成事項刪除線 ------------- */
+.delete-line{
+    position: relative;
+}
+.delete-line:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 1px;
+    background: #eab32a;
+}
+
+/* ------------- 刪除按鈕 ------------- */
+.deleteBtn{
+    background: #e31717;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* ------------- 新增按鈕 ------------- */
+.addBtn{
+    background: #975aad;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* ------------- 刪除按鈕 ------------- */
+.editBtn{
+    background: #975aad;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translate(-100%, -50%);
+    cursor: pointer;
+}
